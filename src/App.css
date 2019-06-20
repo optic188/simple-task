@@ -47,3 +47,41 @@
     height: 130px;
     background-color: blue;
 }
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0.5em;
+    margin:0.5em 0;
+}
+.item p {
+    margin: 0;
+    font-weight: bold;
+}
+.item> .delete-icon {
+    color:#6f93ed;
+    position: relative;
+    top:0.1em;
+    align-self: end;
+}
+.item > div {
+    align-items: center;
+    width: 100%;
+}
+.item > div:last-child {
+    display:none;
+    justify-content: flex-end;
+}
+.item:hover > div:last-child {
+    display: flex;
+}
+.item:hover {
+    background: #f2dcef;
+}
+.item p {
+    margin-left:0.5em;
+}
+.item p.underline {
+    text-decoration: line-through;
+    color:grey;
+}
