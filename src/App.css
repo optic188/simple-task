@@ -1,0 +1,49 @@
+@import '~antd/dist/antd.css';
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid grey;
+    padding: 1em 2em;
+    box-sizing: padding-box;
+    width: 100%;
+}
+
+.user-info {
+    width: 30%;
+}
+
+.todo-list {
+    width: 70%;
+}
+
+.todo-list header, h2 {
+    color: white;
+}
+
+.todo-list header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    justify-content: flex-end
+}
+
+.user_user-wrapper, .todo-list_todo-list-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5em;
+}
+.todo-list_todo-list-wrapper {
+    background: #f2dcef;
+    padding-left: 1em;
+}
+.user_user-wrapper > p, .todo-list_todo-list-wrapper > p {
+    position: relative;
+    top: 0.5em;
+    left: 0.5em;
+}
+.todo-list_header {
+    height: 130px;
+    background-color: blue;
+}
