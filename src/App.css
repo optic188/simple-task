@@ -9,79 +9,35 @@
     width: 100%;
 }
 
-.user-info {
-    width: 30%;
+.table-list {
+    width: 100%;
 }
-
-.todo-list {
-    width: 70%;
+.table-list_body {
+    width:100%;
 }
-
-.todo-list header, h2 {
+.table-list_body td {
+    text-align: center;
+    vertical-align: middle;
+}
+.table-list header, h2 {
     color: white;
 }
 
-.todo-list header {
+.table-list header {
     display: flex;
     flex-direction: column;
     padding: 0 1em;
     justify-content: flex-end
 }
 
-.user_user-wrapper, .todo-list_todo-list-wrapper {
+.todo-list_todo-list-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 0.5em;
 }
-.todo-list_todo-list-wrapper {
-    background: #f2dcef;
-    padding-left: 1em;
-}
-.user_user-wrapper > p, .todo-list_todo-list-wrapper > p {
-    position: relative;
-    top: 0.5em;
-    left: 0.5em;
-}
-.todo-list_header {
+
+.table-list_header {
     height: 130px;
     background-color: blue;
-}
-.item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 0.5em;
-    margin:0.5em 0;
-}
-.item p {
-    margin: 0;
-    font-weight: bold;
-}
-.item> .delete-icon {
-    color:#6f93ed;
-    position: relative;
-    top:0.1em;
-    align-self: end;
-}
-.item > div {
-    align-items: center;
-    width: 100%;
-}
-.item > div:last-child {
-    display:none;
-    justify-content: flex-end;
-}
-.item:hover > div:last-child {
-    display: flex;
-}
-.item:hover {
-    background: #f2dcef;
-}
-.item p {
-    margin-left:0.5em;
-}
-.item p.underline {
-    text-decoration: line-through;
-    color:grey;
 }
