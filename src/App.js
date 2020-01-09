@@ -1,19 +1,52 @@
 import React from 'react';
 import "./index.css";
-import Table from "./components/Table";
-import { Provider } from 'react-redux'
-import configureStore from "./redux/store";
+import Login from "./components/Login";
+import Registration from "./components/Registration";
+import Resume from "./components/Resume";
+import { Switch, Route } from 'react-router-dom'
 
-const reduxStore = configureStore();
+import {connect} from "react-redux";
 
 class App extends React.Component {
     render() {
+        const {user} = this.props;
         return (
-            <Provider store={reduxStore}>
-                <Table/>
-            </Provider>
+            <Switch>
+                {user.loggedIn &&
+                <Route exact path="/" >
+                    <Resume />
+                </Route>
+                }
+                {user.loggedIn &&
+                <Route exact path="/cv" >
+                    <Resume />
+                </Route>
+                }
+                <Route exact path="/login">
+                    <Login />
+                </Route>
+                <Route exact path="/cv">
+                    <Login />
+                </Route>
+                <Route exact path="/">
+                    <Login />
+                </Route>
+                <Route exact path="/registration" >
+                    <Registration />
+                </Route>
+            </Switch>
         )
     }
 }
 
-export default App
+const mapStateToProps = state => ({
+    user: state.user
+});
+
+
+
+export default connect(
+    mapStateToProps,
+    null
+)(App);
+

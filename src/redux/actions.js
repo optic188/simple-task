@@ -1,16 +1,16 @@
 export const Types = {
-    INITIAL_DATA: "INITIAL_DATA",
-    SEARCH_ITEM: "SEARCH_ITEM",
-    RESET_ITEM: "RESET_ITEM"
+    LOAD_RESUME: "LOAD_RESUME",
+    LOGIN: "LOGIN",
+    REGISTER: "REGISTER"
 };
-export const loadItem = payload => ({
-    type: Types.INITIAL_DATA,
+export const loadResume = payload => ({
+    type: Types.LOAD_RESUME,
     payload
 });
-export const searchItem = payload => ({
-    type: Types.SEARCH_ITEM,
+export const login = payload => ({
+    type: Types.LOGIN,
     payload
 });
-export const resetItem = () => ({
-    type: Types.RESET_ITEM,
+export const register = () => ({
+    type: Types.REGISTER,
 });
